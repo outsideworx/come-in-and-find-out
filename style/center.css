@@ -1,0 +1,22 @@
+body {
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.title {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-100%, 25%);
+ }

@@ -8,5 +8,16 @@
 </head>
 <body>
 <img src="img/static.png" width="720px" class="center" alt="Come In and Find Out"/>
+<script>
+    function isMobileDevice() {
+        return /Mobi|Android/i.test(navigator.userAgent);
+    }
+    function updateLocation() {
+        if (isMobileDevice()) {
+            window.location.replace("index_mobile.html");
+        }
+    }
+    updateLocation();
+</script>
 </body>
 </html>

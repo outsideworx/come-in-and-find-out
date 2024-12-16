@@ -13,10 +13,3 @@ body {
     pointer-events: none;
     overflow: hidden;
 }
-
-.title {
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-100%, 20%);
- }

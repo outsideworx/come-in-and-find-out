@@ -16,9 +16,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute; /* Position relative to the viewport */
-    top: 780px; /* Vertical center */
-    left: 50%; /* Horizontal center */
+    position: absolute;
+    top: 780px;
+    left: 50%;
     transform: translate(-65%);
 }
 
@@ -26,8 +26,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute; /* Position relative to the viewport */
-    top: 450px; /* Vertical center */
-    left: 50%; /* Horizontal center */
+    position: absolute;
+    top: 450px;
+    left: 50%;
     transform: translate(-65%);
 }

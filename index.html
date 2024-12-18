@@ -11,7 +11,7 @@
     <img src="img/title.png" width="280px" alt="Come In and Find Out"/>
     <br/>
     <br/>
-    <img src="img/tv.png" width="540px" alt="TV"/>
+    <img id="toggleImage" src="#" width="540px" alt="TV"/>
 </div>
 <div class="horizontal">
     <a href="index_video.html">
@@ -19,18 +19,7 @@
     </a>
     <img src="img/coming_soon.png" width="280px" alt="Coming Soon"/>
 </div>
-<script>
-    function isMobileDevice() {
-        return /Mobi|Android/i.test(navigator.userAgent);
-    }
-
-    function updateLocation() {
-        if (isMobileDevice()) {
-            window.location.replace("index_mobile.html");
-        }
-    }
-
-    updateLocation();
-</script>
+<script src="script/mobile.js"></script>
+<script src="script/toggle.js"></script>
 </body>
 </html>

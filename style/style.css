@@ -16,4 +16,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute; /* Position relative to the viewport */
+    top: 780px; /* Vertical center */
+    left: 50%; /* Horizontal center */
+    transform: translate(-65%);
+}
+
+.horizontal-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Position relative to the viewport */
+    top: 450px; /* Vertical center */
+    left: 50%; /* Horizontal center */
+    transform: translate(-65%);
 }

@@ -6,4 +6,4 @@ Whether you're looking for art, decor, or something special, Come In and Find Ou
 
 ---
 
-![design_ciafo](https://outsideworx.net/assets/img/portfolio/design_ciafo.webp)
+![design_ciafo](https://github.com/user-attachments/assets/3f136eb4-bbbd-4b3c-b38e-5ca26d88426a)

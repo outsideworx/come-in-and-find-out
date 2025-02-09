@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Disable scrolling */
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container {
+    position: relative;
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img {
+    height: 100vh;
+    width: auto; /* Maintain aspect ratio */
+    max-width: none;
+}
+.hotspot {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.0);
+    border: 0px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.hotspot:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Example: Positioning hotspots */
+.hotspot1 {
+    top: 7%;  /* Adjust this based on image content */
+    left: 8%; /* Adjust this based on image content */
+    width: 14%;
+    height: 28%;
+}

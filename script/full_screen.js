@@ -3,6 +3,10 @@ function positionHotspots() {
     const hotspot1 = document.getElementById("hotspot1");
     const hotspot2 = document.getElementById("hotspot2");
     const hotspot3 = document.getElementById("hotspot3");
+    const hotspot4 = document.getElementById("hotspot4");
+    const hotspot5 = document.getElementById("hotspot5");
+    const hotspot6 = document.getElementById("hotspot6");
+    const hotspot7 = document.getElementById("hotspot7");
 
     // Original image dimensions (update to match your actual image size)
     const imgNaturalWidth = 1920;
@@ -12,7 +16,11 @@ function positionHotspots() {
     const hotspots = [
         {element: hotspot1, x: 160, y: 80},
         {element: hotspot2, x: 528, y: 80},
-        {element: hotspot3, x: 906, y: 80}
+        {element: hotspot3, x: 906, y: 80},
+        {element: hotspot4, x: 160-8, y: 80+310},
+        {element: hotspot5, x: 528-2, y: 80+310},
+        {element: hotspot6, x: 906-8, y: 80+310},
+        {element: hotspot7, x: 528, y: 80+635}
     ];
 
     // Get actual displayed image size

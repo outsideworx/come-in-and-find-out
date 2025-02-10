@@ -8,7 +8,7 @@
 html, body {
     height: 100%;
     width: 100%;
-    background-color: #480230;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -34,7 +34,7 @@ html, body {
     position: absolute;
     background: rgba(255, 255, 255, 0.0);
     border: 0px solid white;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background 0.2s;
     width: 256px; /* Default size, adjusted dynamically */

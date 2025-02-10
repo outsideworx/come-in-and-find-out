@@ -2,28 +2,39 @@ function positionHotspots() {
     const img = document.getElementById("main-image");
     const hotspot1 = document.getElementById("hotspot1");
 
-    // Original image dimensions (replace with actual image size)
-    const imgNaturalWidth = 1920;  // Example width
-    const imgNaturalHeight = 1080; // Example height
+    // Original image dimensions (update to match your actual image size)
+    const imgNaturalWidth = 1920;
+    const imgNaturalHeight = 1080;
 
-    // Hotspot positions in original image coordinates
+    // Hotspot positions relative to the original image (x, y in pixels)
     const hotspots = [
         {element: hotspot1, x: 160, y: 80}
     ];
 
-    // Get the displayed image size
-    const imgRect = img.getBoundingClientRect();
-    const scaleX = imgRect.width / imgNaturalWidth;
-    const scaleY = imgRect.height / imgNaturalHeight;
+    // Get actual displayed image size
+    const imgContainer = img.parentElement;
+    const containerRect = imgContainer.getBoundingClientRect();
 
-    // Position each hotspot
+    // Calculate the correct scale for width and height
+    const scale = Math.min(containerRect.width / imgNaturalWidth, containerRect.height / imgNaturalHeight);
+
+    // Get displayed image size based on the scaling factor
+    const displayedWidth = imgNaturalWidth * scale;
+    const displayedHeight = imgNaturalHeight * scale;
+
+    // Calculate image offset inside the container
+    const offsetX = (containerRect.width - displayedWidth) / 2;
+    const offsetY = (containerRect.height - displayedHeight) / 2;
+
+    // Position each hotspot correctly
     hotspots.forEach(hs => {
-        hs.element.style.left = `${imgRect.left + hs.x * scaleX}px`;
-        hs.element.style.top = `${imgRect.top + hs.y * scaleY}px`;
-        hs.element.style.width = `${256 * scaleX}px`; // Scale hotspot size
-        hs.element.style.height = `${300 * scaleY}px`;
+        hs.element.style.left = `${offsetX + hs.x * scale}px`;
+        hs.element.style.top = `${offsetY + hs.y * scale}px`;
+        hs.element.style.width = `${256 * scale}px`; // Scale hotspot size
+        hs.element.style.height = `${300 * scale}px`;
     });
 }
 
+// Run on page load and window resize
 window.addEventListener("resize", positionHotspots);
 window.addEventListener("load", positionHotspots);

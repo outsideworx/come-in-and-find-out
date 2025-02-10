@@ -2,11 +2,6 @@ function positionHotspots() {
     const img = document.getElementById("main-image");
     const hotspot1 = document.getElementById("hotspot1");
     const hotspot2 = document.getElementById("hotspot2");
-    const hotspot3 = document.getElementById("hotspot3");
-    const hotspot4 = document.getElementById("hotspot4");
-    const hotspot5 = document.getElementById("hotspot5");
-    const hotspot6 = document.getElementById("hotspot6");
-    const hotspot7 = document.getElementById("hotspot7");
 
     // Original image dimensions (update to match your actual image size)
     const imgNaturalWidth = 1920;

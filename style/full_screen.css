@@ -12,12 +12,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 }
 
 .image-container {
@@ -48,5 +42,20 @@ html, body {
 }
 
 .hotspot:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.theme {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.0);
+    border: 0px solid white;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 120px; /* Default size, adjusted dynamically */
+    height: 120px;
+}
+
+.theme:hover {
     background: rgba(255, 255, 255, 0.2);
 }

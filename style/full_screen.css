@@ -74,3 +74,33 @@ html, body {
 .item:hover {
     background: rgba(255, 255, 255, 0.2);
 }
+
+.detail {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.0);
+    border: 0px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 340px; /* Default size, adjusted dynamically */
+    height: 256px;
+}
+
+.detail:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.interest {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.0);
+    border: 0px solid white;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 400px; /* Default size, adjusted dynamically */
+    height: 256px;
+}
+
+.interest:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

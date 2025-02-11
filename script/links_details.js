@@ -4,9 +4,7 @@ function positionLinks() {
     const theme1 = document.getElementById("theme1");
     const theme2 = document.getElementById("theme2");
     const theme3 = document.getElementById("theme3");
-    const navigation1 = document.getElementById("navigation1");
     const navigation2 = document.getElementById("navigation2");
-    const navigation3 = document.getElementById("navigation3");
     const detail1 = document.getElementById("detail1");
     const detail2 = document.getElementById("detail2");
     const detail3 = document.getElementById("detail3");
@@ -21,9 +19,7 @@ function positionLinks() {
         {element: theme1, x: 1367, y: 930},
         {element: theme2, x: 1537, y: 930},
         {element: theme3, x: 1705, y: 930},
-        {element: navigation1, x: 636, y: 935},
         {element: navigation2, x: 780, y: 930},
-        {element: navigation3, x: 930, y: 930}
     ];
     const details = [
         {element: detail1, x: 480, y: 80},
@@ -50,17 +46,17 @@ function positionLinks() {
     const offsetX = (containerRect.width - displayedWidth) / 2;
     const offsetY = (containerRect.height - displayedHeight) / 2;
 
-    details.forEach(hs => {
-        hs.element.style.left = `${offsetX + hs.x * scale}px`;
-        hs.element.style.top = `${offsetY + hs.y * scale}px`;
-        hs.element.style.width = `${340 * scale}px`; // Scale hotspot size
-        hs.element.style.height = `${340 * scale}px`;
-    });
     themes.forEach(hs => {
         hs.element.style.left = `${offsetX + hs.x * scale}px`;
         hs.element.style.top = `${offsetY + hs.y * scale}px`;
         hs.element.style.width = `${120 * scale}px`; // Scale hotspot size
         hs.element.style.height = `${120 * scale}px`;
+    });
+    details.forEach(hs => {
+        hs.element.style.left = `${offsetX + hs.x * scale}px`;
+        hs.element.style.top = `${offsetY + hs.y * scale}px`;
+        hs.element.style.width = `${340 * scale}px`; // Scale hotspot size
+        hs.element.style.height = `${340 * scale}px`;
     });
     interests.forEach(hs => {
         hs.element.style.left = `${offsetX + hs.x * scale}px`;

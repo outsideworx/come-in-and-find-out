@@ -59,3 +59,18 @@ html, body {
 .theme:hover {
     background: rgba(255, 255, 255, 0.2);
 }
+
+.item {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.0);
+    border: 0px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 340px; /* Default size, adjusted dynamically */
+    height: 256px;
+}
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

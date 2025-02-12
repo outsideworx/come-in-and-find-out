@@ -1,12 +1,5 @@
 function positionLinks() {
     const img = document.getElementById("main-image");
-    const hotspot1 = document.getElementById("hotspot1");
-    const hotspot2 = document.getElementById("hotspot2");
-    const hotspot3 = document.getElementById("hotspot3");
-    const hotspot4 = document.getElementById("hotspot4");
-    const hotspot5 = document.getElementById("hotspot5");
-    const hotspot6 = document.getElementById("hotspot6");
-    const hotspot7 = document.getElementById("hotspot7");
     const theme0 = document.getElementById("theme0");
     const theme1 = document.getElementById("theme1");
     const theme2 = document.getElementById("theme2");
@@ -17,15 +10,6 @@ function positionLinks() {
     const imgNaturalHeight = 1080;
 
     // Hotspot positions relative to the original image (x, y in pixels)
-    const links = [
-        {element: hotspot1, x: 160, y: 80},
-        {element: hotspot2, x: 528, y: 80},
-        {element: hotspot3, x: 906, y: 80},
-        {element: hotspot4, x: 152, y: 390},
-        {element: hotspot5, x: 526, y: 390},
-        {element: hotspot6, x: 898, y: 390},
-        {element: hotspot7, x: 528, y: 715}
-    ];
     const themes = [
         {element: theme0, x: 1545, y: 700},
         {element: theme1, x: 1367, y: 930},
@@ -49,12 +33,6 @@ function positionLinks() {
     const offsetY = (containerRect.height - displayedHeight) / 2;
 
     // Position each hotspot correctly
-    links.forEach(hs => {
-        hs.element.style.left = `${offsetX + hs.x * scale}px`;
-        hs.element.style.top = `${offsetY + hs.y * scale}px`;
-        hs.element.style.width = `${256 * scale}px`; // Scale hotspot size
-        hs.element.style.height = `${300 * scale}px`;
-    });
     themes.forEach(hs => {
         hs.element.style.left = `${offsetX + hs.x * scale}px`;
         hs.element.style.top = `${offsetY + hs.y * scale}px`;

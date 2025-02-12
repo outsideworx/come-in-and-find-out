@@ -63,7 +63,7 @@ html, body {
 .item {
     position: absolute;
     background: rgba(255, 255, 255, 0.0);
-    border: 0px solid white;
+    border: 1px solid white;
     border-radius: 25px;
     cursor: pointer;
     transition: background 0.2s;
@@ -78,7 +78,7 @@ html, body {
 .detail {
     position: absolute;
     background: rgba(255, 255, 255, 0.0);
-    border: 0px solid white;
+    border: 1px solid white;
     border-radius: 25px;
     cursor: pointer;
     transition: background 0.2s;

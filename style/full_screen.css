@@ -37,7 +37,7 @@ html, body {
     border-radius: 25px;
     cursor: pointer;
     transition: background 0.2s;
-    width: 256px; /* Default size, adjusted dynamically */
+    width: 256px;
     height: 300px;
 }
 
@@ -52,12 +52,8 @@ html, body {
     border-radius: 100px;
     cursor: pointer;
     transition: background 0.2s;
-    width: 120px; /* Default size, adjusted dynamically */
+    width: 120px;
     height: 120px;
-}
-
-.theme:hover {
-    background: rgba(255, 255, 255, 0.0);
 }
 
 .item {
@@ -67,7 +63,7 @@ html, body {
     border-radius: 25px;
     cursor: pointer;
     transition: background 0.2s;
-    width: 340px; /* Default size, adjusted dynamically */
+    width: 340px;
     height: 256px;
 }
 
@@ -82,7 +78,7 @@ html, body {
     border-radius: 25px;
     cursor: pointer;
     transition: background 0.2s;
-    width: 340px; /* Default size, adjusted dynamically */
+    width: 340px;
     height: 256px;
 }
 
@@ -97,10 +93,18 @@ html, body {
     border-radius: 100px;
     cursor: pointer;
     transition: background 0.2s;
-    width: 400px; /* Default size, adjusted dynamically */
+    width: 400px;
     height: 256px;
 }
 
-.interest:hover {
+.description {
+    position: absolute;
     background: rgba(255, 255, 255, 0.0);
+    border: 0px solid white;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', serif;
+    transition: background 0.2s;
+    width: 290px;
+    height: 400px;
 }

@@ -2,6 +2,7 @@ function positionLinks() {
     const img = document.getElementById("main-image");
     const navigation2 = document.getElementById("navigation2");
     const interest1 = document.getElementById("interest");
+    const description1 = document.getElementById("description");
 
     // Original image dimensions (update to match your actual image size)
     const imgNaturalWidth = 1920;
@@ -11,6 +12,9 @@ function positionLinks() {
     ];
     const interests = [
         {element: interest1, x: 654, y: 832}
+    ];
+    const descriptions = [
+        {element: description1, x: 150, y: 400}
     ];
 
     // Get actual displayed image size
@@ -39,6 +43,12 @@ function positionLinks() {
         hs.element.style.top = `${offsetY + hs.y * scale}px`;
         hs.element.style.width = `${380 * scale}px`; // Scale hotspot size
         hs.element.style.height = `${100 * scale}px`;
+    });
+    descriptions.forEach(hs => {
+        hs.element.style.left = `${offsetX + hs.x * scale}px`;
+        hs.element.style.top = `${offsetY + hs.y * scale}px`;
+        hs.element.style.width = `${290 * scale}px`; // Scale hotspot size
+        hs.element.style.height = `${400 * scale}px`;
     });
 }
 

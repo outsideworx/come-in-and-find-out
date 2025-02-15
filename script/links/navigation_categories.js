@@ -31,7 +31,7 @@ function positionLinks() {
     navigation.forEach(hs => {
         hs.element.style.left = `${offsetX + hs.x * scale}px`;
         hs.element.style.top = `${offsetY + hs.y * scale}px`;
-        hs.element.style.width = `${120 * scale}px`; // Scale hotspot size
+        hs.element.style.width = `${120 * scale}px`;
         hs.element.style.height = `${120 * scale}px`;
     });
 }

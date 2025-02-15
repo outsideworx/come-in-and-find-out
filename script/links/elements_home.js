@@ -42,7 +42,7 @@ function positionLinks() {
     links.forEach(hs => {
         hs.element.style.left = `${offsetX + hs.x * scale}px`;
         hs.element.style.top = `${offsetY + hs.y * scale}px`;
-        hs.element.style.width = `${256 * scale}px`; // Scale hotspot size
+        hs.element.style.width = `${256 * scale}px`;
         hs.element.style.height = `${300 * scale}px`;
     });
 }

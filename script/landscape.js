@@ -10,6 +10,15 @@ function enableFullscreen() {
     } else if (docEl.msRequestFullscreen) { // IE/Edge
         docEl.msRequestFullscreen();
     }
+
+    // Lock orientation if supported
+    if (screen.orientation && screen.orientation.lock) {
+        try {
+            screen.orientation.lock("landscape");
+        } catch (err) {
+            console.error("Orientation lock failed:", err);
+        }
+    }
 }
 
 function checkOrientation() {

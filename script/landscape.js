@@ -16,7 +16,7 @@ function enableFullscreen() {
         try {
             screen.orientation.lock("landscape");
         } catch (err) {
-            console.error("Orientation lock failed:", err);
+            alert(err);
         }
     }
 }

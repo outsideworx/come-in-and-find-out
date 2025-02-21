@@ -20,7 +20,9 @@ function enableFullscreen() {
         let iframe = document.getElementById("iframe-container");
         iframe.style.width = "100vw";
         iframe.style.height = "100vh";
-    }, 300);
+        iframe.style.visibility = "visible";
+        iframe.style.position = "static";
+    }, 500);
 }
 
 function checkOrientation() {
@@ -36,13 +38,18 @@ function checkOrientation() {
             image.src = "../img_pages/index.webp";
             link.removeEventListener("click", enableFullscreen);
 
-            // Instead of hiding, shrink iframe to avoid fullscreen exit
+            // Shrink iFrame instead of hiding it completely
             iframe.style.width = "0px";
             iframe.style.height = "0px";
+            iframe.style.visibility = "hidden";
+            iframe.style.position = "absolute";
         }
     } else {
-        document.getElementById("iframe-container").style.width = "100vw";
-        document.getElementById("iframe-container").style.height = "100vh";
+        let iframe = document.getElementById("iframe-container");
+        iframe.style.width = "100vw";
+        iframe.style.height = "100vh";
+        iframe.style.visibility = "visible";
+        iframe.style.position = "static";
     }
 }
 

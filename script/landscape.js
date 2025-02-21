@@ -3,8 +3,8 @@ function isMobileDevice() {
 }
 
 function enableFullscreen() {
-    // Try to go fullscreen
     let docEl = document.documentElement;
+
     if (docEl.requestFullscreen) {
         docEl.requestFullscreen();
     } else if (docEl.mozRequestFullScreen) { // Firefox
@@ -15,27 +15,39 @@ function enableFullscreen() {
         docEl.msRequestFullscreen();
     }
 
+    // Expand the iframe only after fullscreen is confirmed
     setTimeout(() => {
-        document.getElementById("iframe-container").style.display = "block";
-    }, 500); // Delay to ensure fullscreen is active
+        let iframe = document.getElementById("iframe-container");
+        iframe.style.width = "100vw";
+        iframe.style.height = "100vh";
+    }, 300);
 }
 
 function checkOrientation() {
     if (isMobileDevice()) {
         const image = document.getElementById("image");
         const link = document.getElementById("link");
+        const iframe = document.getElementById("iframe-container");
+
         if (window.innerWidth > window.innerHeight) {
-            image.src = "../img_pages/login.png"
-            link.onclick = enableFullscreen;
+            image.src = "../img_pages/login.png";
+            link.onclick = () => {
+                enableFullscreen(); // Call fullscreen only when clicked
+            };
         } else {
-            image.src = "../img_pages/index.webp"
+            image.src = "../img_pages/index.webp";
             link.onclick = null;
-            document.getElementById("iframe-container").style.display = "none";
+
+            // Instead of hiding, shrink iframe to avoid fullscreen exit
+            iframe.style.width = "0px";
+            iframe.style.height = "0px";
         }
     } else {
-        document.getElementById("iframe-container").style.display = "block";
+        document.getElementById("iframe-container").style.width = "100vw";
+        document.getElementById("iframe-container").style.height = "100vh";
     }
 }
 
+// Attach events
 window.addEventListener("load", checkOrientation);
 window.addEventListener("resize", checkOrientation);

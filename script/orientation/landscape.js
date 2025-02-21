@@ -1,5 +1,5 @@
 function full_screen() {
-    let element = document.documentElement;
+    let element = document.getElementById("image-container") || document.documentElement;
     if (element.requestFullscreen) {
         element.requestFullscreen();
     } else if (element.mozRequestFullScreen) {

@@ -28,10 +28,10 @@ function checkOrientation() {
     const link = document.getElementById("link");
     if (window.innerWidth > window.innerHeight) {
         image.src = "../img_pages/login.webp";
-        link.onclick = full_screen;
+        link.addEventListener("click", full_screen);
     } else {
         image.src = "../img_pages/index.webp";
-        link.onclick = null;
+        link.removeEventListener("click", full_screen);
         exit_full_screen();
     }
 }

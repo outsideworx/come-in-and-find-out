@@ -20,11 +20,15 @@ function enableFullscreen() {
 
 function checkOrientation() {
     if (isMobileDevice()) {
+        const image = document.getElementById("image");
+        const link = document.getElementById("link");
         if (window.innerWidth > window.innerHeight) {
-            const image = document.getElementById("image");
-            const link = document.getElementById("link");
             image.src = "../img_pages/login.png"
             link.onclick = enableFullscreen;
+        } else {
+            image.src = "../img_pages/index.webp"
+            link.onclick = null;
+            document.getElementById("iframe-container").style.display = "none";
         }
     } else {
         document.getElementById("iframe-container").style.display = "block";

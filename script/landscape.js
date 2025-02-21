@@ -15,7 +15,9 @@ function enableFullscreen() {
         docEl.msRequestFullscreen();
     }
 
-    document.getElementById("iframe-container").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("iframe-container").style.display = "block";
+    }, 500); // Delay to ensure fullscreen is active
 }
 
 function checkOrientation() {

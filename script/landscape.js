@@ -31,12 +31,10 @@ function checkOrientation() {
 
         if (window.innerWidth > window.innerHeight) {
             image.src = "../img_pages/login.png";
-            link.onclick = () => {
-                enableFullscreen(); // Call fullscreen only when clicked
-            };
+            link.addEventListener("click", enableFullscreen);
         } else {
             image.src = "../img_pages/index.webp";
-            link.onclick = null;
+            link.removeEventListener("click", enableFullscreen);
 
             // Instead of hiding, shrink iframe to avoid fullscreen exit
             iframe.style.width = "0px";

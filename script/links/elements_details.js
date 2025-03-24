@@ -1,18 +1,13 @@
 function positionLinks() {
     const img = document.getElementById("main-image");
-    const detail1 = document.getElementById("detail1");
-    const detail2 = document.getElementById("detail2");
-    const detail3 = document.getElementById("detail3");
-    const detail4 = document.getElementById("detail4");
 
-    // Original image dimensions (update to match your actual image size)
     const imgNaturalWidth = 1920;
     const imgNaturalHeight = 1080;
     const details = [
-        {element: detail1, x: 480, y: 80},
-        {element: detail2, x: 860, y: 80},
-        {element: detail3, x: 480, y: 460},
-        {element: detail4, x: 860, y: 460}
+        {element: document.getElementById("detail1"), x: 480, y: 80},
+        {element: document.getElementById("detail2"), x: 860, y: 80},
+        {element: document.getElementById("detail3"), x: 480, y: 460},
+        {element: document.getElementById("detail4"), x: 860, y: 460}
     ];
 
     // Get actual displayed image size

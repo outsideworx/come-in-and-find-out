@@ -1,9 +1,5 @@
 function positionLinks() {
     const img = document.getElementById("main-image");
-    const theme0 = document.getElementById("theme0");
-    const theme1 = document.getElementById("theme1");
-    const theme2 = document.getElementById("theme2");
-    const theme3 = document.getElementById("theme3");
 
     // Original image dimensions (update to match your actual image size)
     const imgNaturalWidth = 1920;
@@ -11,10 +7,10 @@ function positionLinks() {
 
     // Hotspot positions relative to the original image (x, y in pixels)
     const themes = [
-        {element: theme0, x: 1545, y: 700},
-        {element: theme1, x: 1367, y: 930},
-        {element: theme2, x: 1537, y: 930},
-        {element: theme3, x: 1705, y: 930}
+        {element: document.getElementById("theme0"), x: 1545, y: 700},
+        {element: document.getElementById("theme1"), x: 1367, y: 930},
+        {element: document.getElementById("theme2"), x: 1537, y: 930},
+        {element: document.getElementById("theme3"), x: 1705, y: 930}
     ];
 
     // Get actual displayed image size

@@ -1,23 +1,18 @@
+let items = [
+    {element: document.getElementById("item1"), x: 480, y: 80},
+    {element: document.getElementById("item2"), x: 860, y: 80},
+    {element: document.getElementById("item3"), x: 480, y: 370},
+    {element: document.getElementById("item4"), x: 860, y: 370},
+    {element: document.getElementById("item5"), x: 480, y: 660},
+    {element: document.getElementById("item6"), x: 860, y: 660}
+];
+
 function positionLinks() {
     const img = document.getElementById("main-image");
-    const item1 = document.getElementById("item1");
-    const item2 = document.getElementById("item2");
-    const item3 = document.getElementById("item3");
-    const item4 = document.getElementById("item4");
-    const item5 = document.getElementById("item5");
-    const item6 = document.getElementById("item6");
 
     // Original image dimensions (update to match your actual image size)
     const imgNaturalWidth = 1920;
     const imgNaturalHeight = 1080;
-    const items = [
-        {element: item1, x: 480, y: 80},
-        {element: item2, x: 860, y: 80},
-        {element: item3, x: 480, y: 370},
-        {element: item4, x: 860, y: 370},
-        {element: item5, x: 480, y: 660},
-        {element: item6, x: 860, y: 660}
-    ];
 
     // Get actual displayed image size
     const imgContainer = img.parentElement;

@@ -1,16 +1,13 @@
 function positionLinks() {
     const img = document.getElementById("main-image");
-    const navigation1 = document.getElementById("navigation1");
-    const navigation2 = document.getElementById("navigation2");
-    const navigation3 = document.getElementById("navigation3");
 
     // Original image dimensions (update to match your actual image size)
     const imgNaturalWidth = 1920;
     const imgNaturalHeight = 1080;
     const navigation = [
-        {element: navigation1, x: 636, y: 935},
-        {element: navigation2, x: 780, y: 930},
-        {element: navigation3, x: 930, y: 930}
+        {element: document.getElementById("navigation1"), x: 636, y: 935},
+        {element: document.getElementById("navigation2"), x: 780, y: 930},
+        {element: document.getElementById("navigation3"), x: 930, y: 930}
     ];
 
     // Get actual displayed image size

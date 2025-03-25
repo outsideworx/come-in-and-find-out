@@ -4,7 +4,6 @@ function positionLinks() {
     const interest1 = document.getElementById("interest");
     const description1 = document.getElementById("description");
 
-    // Original image dimensions (update to match your actual image size)
     const imgNaturalWidth = 1920;
     const imgNaturalHeight = 1080;
     const navigation = [

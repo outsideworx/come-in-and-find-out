@@ -3,8 +3,6 @@ function positionLinks() {
 
     const imgNaturalWidth = 1920;
     const imgNaturalHeight = 1080;
-
-    // Hotspot positions relative to the original image (x, y in pixels)
     const links = [
         {element: document.getElementById("hotspot1"), x: 160, y: 80},
         {element: document.getElementById("hotspot2"), x: 528, y: 80},

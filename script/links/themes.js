@@ -1,11 +1,8 @@
 function positionLinks() {
     const img = document.getElementById("main-image");
 
-    // Original image dimensions (update to match your actual image size)
     const imgNaturalWidth = 1920;
     const imgNaturalHeight = 1080;
-
-    // Hotspot positions relative to the original image (x, y in pixels)
     const themes = [
         {element: document.getElementById("theme0"), x: 1545, y: 700},
         {element: document.getElementById("theme1"), x: 1367, y: 930},

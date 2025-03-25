@@ -30,6 +30,14 @@ function positionLinks() {
         hs.element.style.top = `${offsetY + hs.y * scale}px`;
         hs.element.style.width = `${340 * scale}px`;
         hs.element.style.height = `${340 * scale}px`;
+
+        const imgInsideItem = hs.element.querySelector("img");
+        if (imgInsideItem) {
+            imgInsideItem.style.position = "absolute";
+            imgInsideItem.style.left = "50%";
+            imgInsideItem.style.top = "50%";
+            imgInsideItem.style.transform = "translate(-50%, -50%)";
+        }
     });
 }
 

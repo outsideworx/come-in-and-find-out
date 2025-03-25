@@ -21,6 +21,9 @@ function loadImages() {
                 if (response.image4) {
                     document.getElementById("image4").src = response.image4;
                 }
+                if (response.description) {
+                    document.getElementById("description").innerHTML = response.description.replace(/\n/g, "<br>");
+                }
             }
         },
         error: function (error) {

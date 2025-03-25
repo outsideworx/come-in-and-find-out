@@ -9,6 +9,9 @@ function loadImages(category) {
         method: 'GET',
         success: function (response) {
             if (response && Array.isArray(response)) {
+                if (response.length === 0) {
+                    window.history.go(-1);
+                }
                 response.forEach((item, index) => {
                     if (item.image1) {
                         document.getElementById("image" + (index + 1)).src = item.image1;

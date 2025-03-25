@@ -38,15 +38,15 @@ function setNavigation() {
     let offset = urlParams.get("offset");
     if (offset) {
         offset = parseInt(offset);
-        if (offset !== 0) {
+        if (offset >= 6) {
             let nav1 = document.getElementById("navigation1");
             const url = new URL(nav1.href);
-            url.searchParams.set("offset", offset - 1);
+            url.searchParams.set("offset", offset - 6);
             nav1.href = url.toString();
         }
         let nav3 = document.getElementById("navigation3");
         const url = new URL(nav3.href);
-        url.searchParams.set("offset", offset + 1);
+        url.searchParams.set("offset", offset + 6);
         nav3.href = url.toString();
     }
 }

@@ -17,11 +17,17 @@ html, body {
 .image-container {
     position: relative;
     width: 100vw;
-    height: 89vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+@media (min-aspect-ratio: 1.8) {
+    .image-container {
+        height: 89vh;
+    }
 }
 
 .image-container img {

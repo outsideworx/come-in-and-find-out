@@ -4,7 +4,7 @@ function isMobileDevice() {
 
 function updateSize() {
     if (isMobileDevice()) {
-        document.getElementById("televisionVideoId").height = 400;
+        document.getElementById("televisionVideoId").height = 420;
     }
 }
 

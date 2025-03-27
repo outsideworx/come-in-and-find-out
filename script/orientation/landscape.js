@@ -1,6 +1,6 @@
 function checkOrientation() {
     if (window.innerWidth > window.innerHeight) {
-        window.location.href = "red_home.html";
+        window.location.href = "home.html";
     }
 }
 

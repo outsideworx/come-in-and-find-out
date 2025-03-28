@@ -1,15 +1,12 @@
 function loadImages(category) {
     const urlParams = new URLSearchParams(window.location.search);
     let offset = urlParams.get("offset");
-    if (offset === null) {
-        offset = 0;
-    }
     $.ajax({
         url: `https://services.outsideworx.net/api/come-in-and-find-out/categories/${category}?offset=${offset}`,
         method: 'GET',
         success: function (response) {
             if (response && Array.isArray(response)) {
-                if (response.length === 0) {
+                if (response.length === 0 && offset !== "0") {
                     window.history.go(-1);
                 }
                 response.forEach((item, index) => {

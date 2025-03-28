@@ -24,17 +24,19 @@ function positionLinks() {
     const offsetY = (containerRect.height - displayedHeight) / 2;
 
     items.forEach(hs => {
-        hs.element.style.left = `${offsetX + hs.x * scale}px`;
-        hs.element.style.top = `${offsetY + hs.y * scale}px`;
-        hs.element.style.width = `${340 * scale}px`;
-        hs.element.style.height = `${256 * scale}px`;
+        if (hs.element) {
+            hs.element.style.left = `${offsetX + hs.x * scale}px`;
+            hs.element.style.top = `${offsetY + hs.y * scale}px`;
+            hs.element.style.width = `${340 * scale}px`;
+            hs.element.style.height = `${256 * scale}px`;
 
-        const imgInsideItem = hs.element.querySelector("img");
-        if (imgInsideItem) {
-            imgInsideItem.style.position = "absolute";
-            imgInsideItem.style.left = "50%";
-            imgInsideItem.style.top = "50%";
-            imgInsideItem.style.transform = "translate(-50%, -50%)";
+            const image = hs.element.querySelector("img");
+            if (image) {
+                image.style.position = "absolute";
+                image.style.left = "50%";
+                image.style.top = "50%";
+                image.style.transform = "translate(-50%, -50%)";
+            }
         }
     });
 }

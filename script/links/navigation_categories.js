@@ -9,18 +9,14 @@ function positionLinks() {
         {element: document.getElementById("navigation3"), x: 930, y: 930}
     ];
 
-    // Get actual displayed image size
     const imgContainer = img.parentElement;
     const containerRect = imgContainer.getBoundingClientRect();
 
-    // Calculate the correct scale for width and height
     const scale = Math.min(containerRect.width / imgNaturalWidth, containerRect.height / imgNaturalHeight);
 
-    // Get displayed image size based on the scaling factor
     const displayedWidth = imgNaturalWidth * scale;
     const displayedHeight = imgNaturalHeight * scale;
 
-    // Calculate image offset inside the container
     const offsetX = (containerRect.width - displayedWidth) / 2;
     const offsetY = (containerRect.height - displayedHeight) / 2;
 
@@ -32,6 +28,5 @@ function positionLinks() {
     });
 }
 
-// Run on page load and window resize
 window.addEventListener("resize", positionLinks);
 window.addEventListener("load", positionLinks);

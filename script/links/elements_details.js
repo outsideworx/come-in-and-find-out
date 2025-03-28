@@ -22,10 +22,12 @@ function positionLinks() {
     const offsetY = (containerRect.height - displayedHeight) / 2;
 
     details.forEach(hs => {
-        hs.element.style.left = `${offsetX + hs.x * scale}px`;
-        hs.element.style.top = `${offsetY + hs.y * scale}px`;
-        hs.element.style.width = `${340 * scale}px`;
-        hs.element.style.height = `${340 * scale}px`;
+        if (hs.element) {
+            hs.element.style.left = `${offsetX + hs.x * scale}px`;
+            hs.element.style.top = `${offsetY + hs.y * scale}px`;
+            hs.element.style.width = `${340 * scale}px`;
+            hs.element.style.height = `${340 * scale}px`;
+        }
     });
 }
 

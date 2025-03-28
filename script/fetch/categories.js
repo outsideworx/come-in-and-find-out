@@ -1,6 +1,6 @@
 function loadImages(category) {
     const urlParams = new URLSearchParams(window.location.search);
-    let offset = urlParams.get("offset");
+    const offset = urlParams.get("offset");
     $.ajax({
         url: `https://services.outsideworx.net/api/come-in-and-find-out/categories/${category}?offset=${offset}`,
         method: 'GET',
@@ -35,12 +35,12 @@ function setNavigation() {
     if (offset) {
         offset = parseInt(offset);
         if (offset >= 6) {
-            let nav1 = document.getElementById("navigation1");
+            const nav1 = document.getElementById("navigation1");
             const url = new URL(nav1.href);
             url.searchParams.set("offset", offset - 6);
             nav1.href = url.toString();
         }
-        let nav3 = document.getElementById("navigation3");
+        const nav3 = document.getElementById("navigation3");
         const url = new URL(nav3.href);
         url.searchParams.set("offset", offset + 6);
         nav3.href = url.toString();

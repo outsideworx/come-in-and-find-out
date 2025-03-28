@@ -13,22 +13,17 @@ function positionLinks() {
         {element: document.getElementById("hotspot7"), x: 528, y: 715}
     ];
 
-    // Get actual displayed image size
     const imgContainer = img.parentElement;
     const containerRect = imgContainer.getBoundingClientRect();
 
-    // Calculate the correct scale for width and height
     const scale = Math.min(containerRect.width / imgNaturalWidth, containerRect.height / imgNaturalHeight);
 
-    // Get displayed image size based on the scaling factor
     const displayedWidth = imgNaturalWidth * scale;
     const displayedHeight = imgNaturalHeight * scale;
 
-    // Calculate image offset inside the container
     const offsetX = (containerRect.width - displayedWidth) / 2;
     const offsetY = (containerRect.height - displayedHeight) / 2;
 
-    // Position each hotspot correctly
     links.forEach(hs => {
         hs.element.style.left = `${offsetX + hs.x * scale}px`;
         hs.element.style.top = `${offsetY + hs.y * scale}px`;
@@ -37,6 +32,5 @@ function positionLinks() {
     });
 }
 
-// Run on page load and window resize
 window.addEventListener("resize", positionLinks);
 window.addEventListener("load", positionLinks);

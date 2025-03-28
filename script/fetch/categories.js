@@ -22,11 +22,7 @@ function loadImages(category) {
                     }
                 });
                 for (let i = response.length + 1; i <= 6; i++) {
-                    const link = document.getElementById("item" + i);
-                    if (link) {
-                        link.href = "#";
-                        link.style.cursor = "default";
-                    }
+                    document.getElementById("item" + i).remove();
                 }
             }
         },

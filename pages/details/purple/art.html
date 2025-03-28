@@ -24,10 +24,13 @@
 </div>
 <!-- Bootstrap Modal -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 50vw; max-height: 50vh;">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 75vw;">
         <div class="modal-content bg-transparent border-0">
+            <div class="modal-header" style="border-bottom: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: white; border-radius: 50%;"></button>
+            </div>
             <div class="modal-body text-center">
-                <img id="modalImg" class="img-fluid rounded shadow" alt="" src="">
+                <img id="modalImg" class="img-fluid rounded shadow" alt="" src="" style="width: 100%; max-height: 75vh; object-fit: contain;">
             </div>
         </div>
     </div>

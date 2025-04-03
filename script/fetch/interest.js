@@ -15,8 +15,8 @@ $(document).ready(function () {
         }
     });
 
-    $("#submit").click(function () {
-        const address = $("#address").val();
+    $("#interest-submit").click(function () {
+        const address = $("#interest-address").val();
         $.ajax({
             url: `https://services.outsideworx.net/api/callback/come-in-and-find-out`,
             method: 'POST',

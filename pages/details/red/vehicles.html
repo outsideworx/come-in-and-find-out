@@ -45,7 +45,7 @@
     function setModalImage(imgElement) {
         document.getElementById("modalImg").src = imgElement.src;
     }
-    $(document).ready(function () {
+    $(window).on("load", function () {
         loadImages();
     });
 </script>

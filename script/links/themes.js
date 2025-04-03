@@ -4,7 +4,6 @@ function positionLinks() {
     const imgNaturalWidth = 1920;
     const imgNaturalHeight = 1080;
     const themes = [
-        {element: document.getElementById("theme0"), x: 1545, y: 700},
         {element: document.getElementById("theme1"), x: 1367, y: 930},
         {element: document.getElementById("theme2"), x: 1537, y: 930},
         {element: document.getElementById("theme3"), x: 1705, y: 930}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Come In and Find Out</title>
+    <link rel="icon" type="image/x-icon" href="../../../img/favicon.ico"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../style/layout.css">
+</head>
+<body>
+<div class="image-container">
+    <img id="main-image" src="../../../img/details/purple/vehicles.webp" alt="">
+    <a href="#" class="privacy" id="privacy"></a>
+    <a href="#" class="theme" id="info"></a>
+    <a href="../../red_home.html" class="theme" id="theme1"></a>
+    <a href="../../purple_home.html" class="theme" id="theme2"></a>
+    <a href="../../white_home.html" class="theme" id="theme3"></a>
+    <img src="" class="detail" alt="" id="image1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)" hidden="hidden" />
+    <img src="" class="detail" alt="" id="image2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)" hidden="hidden" />
+    <img src="" class="detail" alt="" id="image3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)" hidden="hidden" />
+    <img src="" class="detail" alt="" id="image4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)" hidden="hidden" />
+    <p class="description" id="description"></p>
+    <a href="mailto:info@come-in-and-find-out.ch?subject=Interest" class="interest" id="interest"></a>
+    <a href="#" class="theme" id="navigation2" onclick="window.history.go(-1);"></a>
+</div>
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mt-1" style="max-width: 75vw;">
+        <div class="modal-content bg-transparent border-0 position-relative">
+            <div class="modal-body text-center position-relative">
+                <button type="button" class="btn-close position-absolute"
+                        data-bs-dismiss="modal" aria-label="Close"
+                        style="top: 0; right: 0; padding: 15px; background-color: white; border-radius: 50%;">
+                </button>
+                <img id="modalImg" class="img-fluid rounded shadow" alt="" src=""
+                     style="max-height: 75vh; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../../script/fetch/details.js"></script>
+<script>
+    function setModalImage(imgElement) {
+        document.getElementById("modalImg").src = imgElement.src;
+    }
+    $(document).ready(function () {
+        loadImages();
+    });
+</script>
+<script src="../../../script/links/themes.js"></script>
+<script src="../../../script/links/privacy.js"></script>
+<script src="../../../script/links/navigation_details.js"></script>
+<script src="../../../script/links/elements_details.js"></script>
+</body>
+</html>

@@ -24,7 +24,7 @@ html, body {
     overflow: hidden;
 }
 
-@media (min-aspect-ratio: 1.8) {
+@media (min-aspect-ratio: 1.9) {
     .image-container {
         height: 89vh;
     }
@@ -40,40 +40,36 @@ html, body {
     position: absolute;
     background: rgba(255, 255, 255, 0.0);
     cursor: pointer;
-    width: 256px;
-    height: 300px;
 }
 
 .theme {
     position: absolute;
     background: rgba(255, 255, 255, 0.0);
     cursor: pointer;
-    width: 120px;
-    height: 120px;
 }
 
 .item {
     position: absolute;
     background: rgba(255, 255, 255, 0.0);
     cursor: pointer;
-    width: 340px;
-    height: 256px;
 }
 
 .detail {
     position: absolute;
     background: rgba(255, 255, 255, 0.0);
     cursor: pointer;
-    width: 340px;
-    height: 256px;
 }
 
 .interest {
     position: absolute;
     background: rgba(255, 255, 255, 0.0);
     cursor: pointer;
-    width: 400px;
-    height: 256px;
+}
+
+.privacy {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.0);
+    cursor: pointer;
 }
 
 .description {
@@ -82,6 +78,4 @@ html, body {
     color: white;
     text-align: center;
     font-family: 'Arial', serif;
-    width: 290px;
-    height: 400px;
 }

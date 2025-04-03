@@ -1,19 +1,16 @@
 function positionLinks() {
     const img = document.getElementById("main-image");
-    const navigation2 = document.getElementById("navigation2");
-    const interest1 = document.getElementById("interest");
-    const description1 = document.getElementById("description");
 
     const imgNaturalWidth = 1920;
     const imgNaturalHeight = 1080;
     const navigation = [
-        {element: navigation2, x: 780, y: 930},
+        {element: document.getElementById("navigation2"), x: 780, y: 930},
     ];
     const interests = [
-        {element: interest1, x: 654, y: 832}
+        {element: document.getElementById("interest"), x: 654, y: 832}
     ];
     const descriptions = [
-        {element: description1, x: 150, y: 400}
+        {element: document.getElementById("description"), x: 150, y: 400}
     ];
 
     const imgContainer = img.parentElement;
@@ -47,6 +44,5 @@ function positionLinks() {
     });
 }
 
-// Run on page load and window resize
 window.addEventListener("resize", positionLinks);
 window.addEventListener("load", positionLinks);

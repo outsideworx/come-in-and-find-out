@@ -10,7 +10,9 @@ function positionLinks() {
         {element: document.getElementById("hotspot4"), x: 152, y: 390},
         {element: document.getElementById("hotspot5"), x: 526, y: 390},
         {element: document.getElementById("hotspot6"), x: 898, y: 390},
-        {element: document.getElementById("hotspot7"), x: 528, y: 715}
+        {element: document.getElementById("hotspot7"), x: 152, y: 715},
+        {element: document.getElementById("hotspot8"), x: 528, y: 715},
+        {element: document.getElementById("hotspot9"), x: 898, y: 715}
     ];
 
     const imgContainer = img.parentElement;

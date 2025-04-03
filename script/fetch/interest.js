@@ -16,18 +16,18 @@ $(document).ready(function () {
     });
 
     $("#submit").click(function () {
-        var address = $("#address").val();
+        const address = $("#address").val();
         $.ajax({
             url: `https://services.outsideworx.net/api/callback/come-in-and-find-out`,
             method: 'POST',
             contentType: "application/json",
             data: JSON.stringify({address: address, product: window.location.href}),
-            success: function (response) {
+            success: function () {
                 $("#responseMsg").text("Callback submitted successfully!").css("color", "green");
                 setTimeout(function () {
                     $("#interestModal").fadeOut();
                     $("#responseMsg").text("");
-                }, 2000);
+                }, 3000);
             },
             error: function () {
                 $("#responseMsg").text("Something went wrong, you can reach us at: info@come-in-and-find-out.ch").css("color", "red");

@@ -6,12 +6,14 @@ $(document).ready(function () {
     $(".interest-close-btn").click(function () {
         $("#interestModal").fadeOut();
         $("#responseMsg").text("");
+        $("#interest-address").val("");
     });
 
     $("#interestModal").click(function (event) {
         if (!$(event.target).closest(".interest-modal-content").length) {
             $("#interestModal").fadeOut();
             $("#responseMsg").text("");
+            $("#interest-address").val("");
         }
     });
 
@@ -27,6 +29,7 @@ $(document).ready(function () {
                 setTimeout(function () {
                     $("#interestModal").fadeOut();
                     $("#responseMsg").text("");
+                    $("#interest-address").val("");
                 }, 3000);
             },
             error: function () {

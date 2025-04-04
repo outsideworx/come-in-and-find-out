@@ -18,7 +18,7 @@ $(document).ready(function () {
     $("#interest-submit").click(function () {
         const address = $("#interest-address").val();
         $.ajax({
-            url: `https://services.outsideworx.net/api/callback/come-in-and-find-out`,
+            url: `http://localhost:8080/api/callback/come-in-and-find-out`,
             method: 'POST',
             contentType: "application/json",
             data: JSON.stringify({address: address, product: window.location.href}),

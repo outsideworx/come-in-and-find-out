@@ -19,6 +19,7 @@ $(document).ready(function () {
 
     $("#interest-submit").click(function () {
         const address = $("#interest-address").val();
+        $("#responseMsg").text("Processing...").css("color", "gray");
         $.ajax({
             url: `https://services.outsideworx.net/api/callback/come-in-and-find-out`,
             method: 'POST',

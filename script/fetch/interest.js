@@ -26,12 +26,7 @@ $(document).ready(function () {
             contentType: "application/json",
             data: JSON.stringify({address: address, product: window.location.href}),
             success: function () {
-                $("#responseMsg").text("Callback submitted successfully!").css("color", "green");
-                setTimeout(function () {
-                    $("#interestModal").fadeOut();
-                    $("#responseMsg").text("");
-                    $("#interest-address").val("");
-                }, 3000);
+                $("#responseMsg").text("Callback requested successfully!").css("color", "green");
             },
             error: function () {
                 $("#responseMsg").text("Something went wrong, you can reach us at: info@come-in-and-find-out.ch").css("color", "red");

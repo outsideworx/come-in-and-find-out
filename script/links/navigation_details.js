@@ -10,7 +10,7 @@ function positionLinks() {
         {element: document.getElementById("interest"), x: 654, y: 832}
     ];
     const descriptions = [
-        {element: document.getElementById("description"), x: 150, y: 400}
+        {element: document.getElementById("description"), x: 130, y: 400}
     ];
 
     const imgContainer = img.parentElement;
@@ -39,8 +39,8 @@ function positionLinks() {
     descriptions.forEach(hs => {
         hs.element.style.left = `${offsetX + hs.x * scale}px`;
         hs.element.style.top = `${offsetY + hs.y * scale}px`;
-        hs.element.style.width = `${290 * scale}px`;
-        hs.element.style.height = `${400 * scale}px`;
+        hs.element.style.width = `${310 * scale}px`;
+        hs.element.style.height = `${580 * scale}px`;
     });
 }
 

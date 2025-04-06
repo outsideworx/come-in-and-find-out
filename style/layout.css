@@ -24,9 +24,20 @@ html, body {
     overflow: hidden;
 }
 
+.description {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.0);
+    color: white;
+    text-align: center;
+    font-family: 'Arial', serif;
+}
+
 @media (min-aspect-ratio: 1.9) {
     .image-container {
         height: 89vh;
+    }
+    .description {
+        font-size: 12px;
     }
 }
 
@@ -70,12 +81,4 @@ html, body {
     position: absolute;
     background: rgba(255, 255, 255, 0.0);
     cursor: pointer;
-}
-
-.description {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.0);
-    color: white;
-    text-align: center;
-    font-family: 'Arial', serif;
 }

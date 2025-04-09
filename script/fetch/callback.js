@@ -1,14 +1,13 @@
 $(document).ready(function () {
     $("#callback").click(function () {
         $("#callbackModal").fadeIn().css("display", "flex");
-        history.pushState({ modalOpen: true }, "", window.location.href);
     });
 
     $(".callback-close-btn").click(function () {
         $("#callbackModal").fadeOut();
         $("#responseMsg").text("");
         $("#callback-address").val("");
-        history.replaceState({ modalOpen: false }, "", window.location.href);
+        window.history.back();
     });
 
     $("#callbackModal").click(function (event) {
@@ -16,7 +15,7 @@ $(document).ready(function () {
             $("#callbackModal").fadeOut();
             $("#responseMsg").text("");
             $("#callback-address").val("");
-            history.replaceState({ modalOpen: false }, "", window.location.href);
+            window.history.back();
         }
     });
 

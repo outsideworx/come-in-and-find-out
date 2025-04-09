@@ -5,6 +5,8 @@ export async function redirect(context: any, originUrl: string) {
         requestHeaders.set("X-Auth-Token", authToken);
     }
 
+    console.log("DEBUGGING new SECRETS feature: " + context.env.AUTH_TOKEN);
+
     const requestUrl = new URL(context.request.url);
     const response = await fetch(originUrl + requestUrl.search, {
         method: context.request.method,

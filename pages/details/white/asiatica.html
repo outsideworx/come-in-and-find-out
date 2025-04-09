@@ -6,7 +6,7 @@
     <link rel="icon" type="image/x-icon" href="../../../img/favicon.ico"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../style/layout.css">
-    <link rel="stylesheet" href="../../../style/interest.css">
+    <link rel="stylesheet" href="../../../style/callback.css">
 </head>
 <body>
 <div class="image-container">
@@ -21,17 +21,17 @@
     <img src="" class="detail" alt="" id="image3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)" hidden="hidden" />
     <img src="" class="detail" alt="" id="image4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)" hidden="hidden" />
     <p class="description" id="description"></p>
-    <a href="#" class="interest" id="interest"></a>
+    <a href="#" class="callback" id="callback"></a>
     <a href="#" class="theme" id="navigation2" onclick="window.history.go(-1);"></a>
 </div>
 <!-- Pop-up Modal -->
-<div id="interestModal">
-    <div class="interest-modal-content">
-        <span class="interest-close-btn">&times;</span>
+<div id="callbackModal">
+    <div class="callback-modal-content">
+        <span class="callback-close-btn">&times;</span>
         <br/>
         <p>Please leave a phone number or a mail address so we can get back to you.</p>
-        <input type="text" id="interest-address" class="interest-input" required>
-        <button id="interest-submit" class="interest-button">Request callback</button>
+        <input type="text" id="callback-address" class="callback-input" required>
+        <button id="callback-submit" class="callback-button">Request callback</button>
         <br/>
         <br/>
         <p id="responseMsg"></p>
@@ -55,7 +55,7 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../../script/fetch/details.js"></script>
-<script src="../../../script/fetch/interest.js"></script>
+<script src="../../../script/fetch/callback.js"></script>
 <script>
     function setModalImage(imgElement) {
         document.getElementById("modalImg").src = imgElement.src;

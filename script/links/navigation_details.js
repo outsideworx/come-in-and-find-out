@@ -6,8 +6,8 @@ function positionLinks() {
     const navigation = [
         {element: document.getElementById("navigation2"), x: 780, y: 930},
     ];
-    const interests = [
-        {element: document.getElementById("interest"), x: 654, y: 832}
+    const callbacks = [
+        {element: document.getElementById("callback"), x: 654, y: 832}
     ];
     const descriptions = [
         {element: document.getElementById("description"), x: 130, y: 400}
@@ -30,7 +30,7 @@ function positionLinks() {
         hs.element.style.width = `${120 * scale}px`;
         hs.element.style.height = `${120 * scale}px`;
     });
-    interests.forEach(hs => {
+    callbacks.forEach(hs => {
         hs.element.style.left = `${offsetX + hs.x * scale}px`;
         hs.element.style.top = `${offsetY + hs.y * scale}px`;
         hs.element.style.width = `${380 * scale}px`;

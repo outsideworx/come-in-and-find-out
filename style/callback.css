@@ -1,4 +1,4 @@
-#interestModal {
+#callbackModal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -11,7 +11,7 @@
     justify-content: center;
 }
 
-.interest-modal-content {
+.callback-modal-content {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -21,7 +21,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.interest-close-btn {
+.callback-close-btn {
     cursor: pointer;
     color: black;
     font-size: 24px;
@@ -31,11 +31,11 @@
     font-weight: bold;
 }
 
-.interest-close-btn:hover {
+.callback-close-btn:hover {
     color: red;
 }
 
-.interest-input {
+.callback-input {
     width: 90%;
     padding: 8px;
     margin: 10px 0;
@@ -43,7 +43,7 @@
     border-radius: 5px;
 }
 
-.interest-button {
+.callback-button {
     padding: 8px 15px;
     background-color: green;
     color: white;
@@ -52,6 +52,6 @@
     border-radius: 5px;
 }
 
-.interest-button:hover {
+.callback-button:hover {
     background-color: darkgreen;
 }

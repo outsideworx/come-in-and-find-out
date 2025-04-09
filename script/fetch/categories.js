@@ -24,6 +24,9 @@ function loadImages(category) {
             }
         },
         error: function (error) {
+            for (let i = 1; i <= 6; i++) {
+                document.getElementById("item" + i).remove();
+            }
             console.error('Error fetching images:', error);
         }
     });

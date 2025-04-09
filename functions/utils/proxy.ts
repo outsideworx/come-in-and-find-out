@@ -15,8 +15,6 @@ export async function redirect(context: any, originUrl: string) {
         redirect: "follow"
     });
 
-    console.log("STATUS: " + response.status);
-
     return new Response(response.body, {
         status: response.status,
         headers: response.headers

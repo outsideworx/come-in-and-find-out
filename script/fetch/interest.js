@@ -28,9 +28,12 @@ $(document).ready(function () {
             success: function () {
                 $("#responseMsg").text("Callback requested successfully!").css("color", "green");
             },
-            error: function (xhr, status, err) {
+            error: function (xhr, status, error) {
                 console.error("AJAX Error Status:", status);
-                console.error("AJAX Error Response:", xhr.responseText);
+                console.error("AJAX Error Message:", error);
+                console.error("AJAX Response Text:", xhr.responseText);
+                console.log("Response Headers:", xhr.getAllResponseHeaders());
+
                 $("#responseMsg").text("Something went wrong, you can reach us at: info@come-in-and-find-out.ch").css("color", "red");
             }
         });

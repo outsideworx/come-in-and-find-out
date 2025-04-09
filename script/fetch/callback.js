@@ -23,7 +23,7 @@ $(document).ready(function () {
         const address = $("#callback-address").val();
         $("#responseMsg").text("Processing...").css("color", "gray");
         $.ajax({
-            url: `/api/callback`,
+            url: `/api/callback?username=come-in-and-find-out`,
             method: 'POST',
             contentType: "application/json",
             data: JSON.stringify({address: address, product: window.location.href}),

@@ -5,7 +5,7 @@ function loadImages() {
         return;
     }
     $.ajax({
-        url: `https://services.outsideworx.net/api/cached/come-in-and-find-out/${id}`,
+        url: `/api/details?id=${id}`,
         method: 'GET',
         success: function (response) {
             if (response) {

@@ -1,11 +1,9 @@
 export async function redirect(context: any, originUrl: string) {
-    const authToken = context.env.AUTH_TOKEN;
+    const authToken = context.env.APP_CLIENTS_CIAFO_TOKEN;
     const requestHeaders = new Headers(context.request.headers);
     if (authToken) {
         requestHeaders.set("X-Auth-Token", authToken);
     }
-
-    console.log("DEBUGGING new SECRETS feature: " + context.env.APP_CLIENTS_CIAFO_TOKEN);
 
     const requestUrl = new URL(context.request.url);
     const response = await fetch(originUrl + requestUrl.search, {

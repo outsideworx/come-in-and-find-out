@@ -2,6 +2,7 @@ export async function redirect(context: any, originUrl: string) {
     const authToken = context.env.APP_CLIENTS_CIAFO_TOKEN;
     const requestHeaders = new Headers(context.request.headers);
     if (authToken) {
+        requestHeaders.set("X-Caller-Id", "come-in-and-find-out");
         requestHeaders.set("X-Auth-Token", authToken);
     }
 

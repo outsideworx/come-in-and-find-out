@@ -1,2 +1,6 @@
 User-agent: *
+Disallow: /
+Allow: /sitemap.xml
+Allow: /pages/home/red_home.html
+
 Sitemap: https://come-in-and-find-out.ch/sitemap.xml

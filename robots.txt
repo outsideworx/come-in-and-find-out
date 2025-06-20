@@ -1,1 +1,2 @@
 User-agent: *
+Sitemap: https://come-in-and-find-out.ch/sitemap.xml

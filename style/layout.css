@@ -34,7 +34,7 @@ html, body {
 
 @media (min-aspect-ratio: 1.9) {
     .image-container {
-        height: 89vh;
+        height: 100dvh;
     }
     .description {
         font-size: 12px;

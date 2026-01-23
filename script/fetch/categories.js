@@ -10,12 +10,14 @@ function loadImages(category) {
                     window.history.go(-1);
                 }
                 response.forEach((item, index) => {
+                    const link = document.getElementById("item" + (index + 1));
                     if (item.image1) {
                         document.getElementById("image" + (index + 1)).src = item.image1;
-                        const link = document.getElementById("item" + (index + 1));
                         const url = new URL(link.href);
                         url.searchParams.set("id", item.id);
                         link.href = url.toString();
+                    } else {
+                        link.remove();
                     }
                 });
                 for (let i = response.length + 1; i <= 6; i++) {

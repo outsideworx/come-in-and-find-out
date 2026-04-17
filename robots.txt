@@ -2,5 +2,6 @@ User-agent: *
 Disallow: /
 Allow: /sitemap.xml
 Allow: /pages/home/red_home.html
+Allow: /img/favicon.ico
 
 Sitemap: https://come-in-and-find-out.ch/sitemap.xml

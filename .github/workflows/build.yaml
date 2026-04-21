@@ -15,6 +15,6 @@ jobs:
             await github.rest.repos.createDispatchEvent({
               owner: 'outsideworx',
               repo: 'sites',
-              event_type: 'build-site',
+              event_type: 'build',
               client_payload: { name: 'come-in-and-find-out' }
             })

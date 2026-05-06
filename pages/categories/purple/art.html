@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Come In and Find Out</title>
     <link rel="icon" type="image/x-icon" href="../../../favicon.ico"/>
+    <link rel="preload" as="image" href="../../../img/categories/purple/art.webp">
     <link rel="stylesheet" href="../../../style/layout.css">
-    <link rel="prefetch" as="document" href="../../details/purple/art.html">
+    <link rel="prefetch" href="../../details/purple/art.html">
 </head>
-<body>
+<body style="background-color: #48012FFF">
 <div class="image-container">
     <img id="main-image" fetchpriority="high" src="../../../img/categories/purple/art.webp" alt="">
     <a href="../../../doc/impressum.pdf" class="privacy" id="privacy" download></a>
@@ -25,13 +26,13 @@
     <a href="../../details/purple/art.html" class="item" id="item5"><img src="" alt="" id="image5"/></a>
     <a href="../../details/purple/art.html" class="item" id="item6"><img src="" alt="" id="image6"/></a>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../../../script/fetch/categories.js"></script>
+<script defer src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script defer src="../../../script/fetch/categories.js"></script>
 <script src="../../../script/links/themes.js"></script>
 <script src="../../../script/links/navigation_categories.js"></script>
 <script src="../../../script/links/elements_categories.js"></script>
-<script defer>
-    $(window).on("load", function () {
+<script>
+    window.addEventListener("load", function () {
         loadImages('Art-Print');
         setNavigation();
     });

@@ -5,7 +5,7 @@ function loadImages() {
         return;
     }
     $.ajax({
-        url: `/api/cached/come-in-and-find-out?id=${id}`,
+        url: `/api/cache/come-in-and-find-out?id=${id}`,
         method: 'GET',
         success: function (response) {
             if (response) {

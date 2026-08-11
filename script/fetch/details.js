@@ -4,10 +4,9 @@ function loadImages() {
     if (id === null) {
         return;
     }
-    $.ajax({
-        url: `/api/cache/come-in-and-find-out?id=${id}`,
-        method: 'GET',
-        success: function (response) {
+    fetch("/api/cache/come-in-and-find-out?id=" + id)
+        .then(function (response) { return response.json(); })
+        .then(function (response) {
             if (response) {
                 if (response.image1) {
                     document.getElementById("image1").src = response.image1;
@@ -37,9 +36,8 @@ function loadImages() {
                     document.getElementById("description").innerHTML = response.description.replace(/\n/g, "<br>");
                 }
             }
-        },
-        error: function (error) {
+        })
+        .catch(function (error) {
             console.error('Error fetching images:', error);
-        }
-    });
+        });
 }

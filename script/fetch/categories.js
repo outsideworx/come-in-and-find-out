@@ -1,15 +1,14 @@
 function loadImages(category) {
     const urlParams = new URLSearchParams(window.location.search);
     const offset = urlParams.get("offset");
-    $.ajax({
-        url: `/api/come-in-and-find-out?category=${category}&offset=${offset}`,
-        method: 'GET',
-        success: function (response) {
+    fetch("/api/come-in-and-find-out?category=" + category + "&offset=" + offset)
+        .then(function (response) { return response.json(); })
+        .then(function (response) {
             if (response && Array.isArray(response)) {
                 if (response.length === 0 && offset !== "0") {
                     window.history.go(-1);
                 }
-                response.forEach((item, index) => {
+                response.forEach(function (item, index) {
                     const link = document.getElementById("item" + (index + 1));
                     if (item.image1) {
                         document.getElementById("image" + (index + 1)).src = item.image1;
@@ -24,14 +23,13 @@ function loadImages(category) {
                     document.getElementById("item" + i).remove();
                 }
             }
-        },
-        error: function (error) {
+        })
+        .catch(function (error) {
             for (let i = 1; i <= 6; i++) {
                 document.getElementById("item" + i).remove();
             }
             console.error('Error fetching images:', error);
-        }
-    });
+        });
 }
 
 function setNavigation() {
